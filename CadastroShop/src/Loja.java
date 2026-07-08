@@ -49,7 +49,7 @@ public class Loja {
 						
 						System.out.println("Cadastro realizado com sucesso!");
 						
-						System.out.println("Deseja Cadastrar Produto? (S/N)");
+						System.out.println("Deseja Cadastrar Outro Produto? (S/N)");
 						String resposta = sc.nextLine();
 						
 						if(resposta.equalsIgnoreCase("N")){										
@@ -72,6 +72,20 @@ public class Loja {
 					
 					
 				case 2:
+					
+					System.out.println("");
+					System.out.println("Esses são os produtos cadastrados no sistema: ");
+						
+
+					for(int i=0; i<totalProdutos; i++){
+						if(produto[i] != null){
+							System.out.printf("Produto: " + produto[i] + " | Valor: %.2f", valor[i]);
+							System.out.println("");
+							System.out.println("");
+							
+						}
+					}
+						
 					
 					break;
 					
