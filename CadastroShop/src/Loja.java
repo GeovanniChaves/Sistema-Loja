@@ -47,6 +47,8 @@ public class Loja {
 						valor[totalProdutos] = sc.nextDouble();
 						sc.nextLine();
 						
+						totalProdutos++;
+						
 						System.out.println("Cadastro realizado com sucesso!");
 						
 						System.out.println("Deseja Cadastrar Outro Produto? (S/N)");
@@ -54,11 +56,11 @@ public class Loja {
 						
 						if(resposta.equalsIgnoreCase("N")){										
 							continuar = false;					
-							System.out.println("Cadastro finalizado. Voltando ao menu...");
-							
+							System.out.println("Cadastro finalizado. Voltando ao menu...");						
+				
 						}else {
 							System.out.println("Continuando cadastro...");
-							totalProdutos++;
+							
 						}
 						
 						
@@ -86,12 +88,30 @@ public class Loja {
 						}
 					}
 						
-					
 					break;
 					
 					
 				case 3:
 					
+					System.out.println("Escolha um produto: ");
+					String procura = sc.nextLine();
+					
+					boolean encontrado = false;
+					
+					for(int i=0; i<totalProdutos; i++){
+						if(procura.equalsIgnoreCase(produto[i])){
+							System.out.println("Está disponível!!");
+							encontrado = true;							
+							break;
+							
+						}	
+					}
+						
+					if(!encontrado){
+							System.out.println("Não está disponível.");
+							
+					}
+							
 					break;
 					
 					
