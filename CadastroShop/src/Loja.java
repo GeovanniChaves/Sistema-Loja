@@ -117,6 +117,44 @@ public class Loja {
 					
 				case 4:
 					
+					System.out.println("Perguntar qual produto deseja remover? ");
+					String remover = sc.nextLine();
+					System.out.println("");
+					
+					boolean tirar = false;
+					
+					for(int i = 0; i<totalProdutos; i++) {
+						if(remover.equalsIgnoreCase(produto[i])){
+							
+							
+								for(int j = i; j<produto.length - 1; j++){
+									produto[j] = produto[j+1];
+									valor[j] = valor[j+1];
+														
+								}
+								
+								
+						produto[totalProdutos - 1] = null;			
+						totalProdutos--;
+						
+						
+						System.out.println("Produto removido.");						
+						tirar = true;						
+																													
+						
+						break;
+						
+						}
+					
+					}	
+					
+					
+					
+					if(!tirar){
+						System.out.println("Produto não encontrado.");
+							
+					}
+										
 					break;
 					
 					
